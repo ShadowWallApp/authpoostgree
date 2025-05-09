@@ -105,6 +105,25 @@ CREATE POLICY "Users can update their own profile"
 ON profiles FOR UPDATE
 USING (auth.uid() = id);
 ```
+## .env
+
+.env Frontend
+
+```bash
+VITE_API_URL=http://localhost:5000
+```
+
+.env Backend
+
+```bash
+# Konfigurasi server
+PORT=5000
+
+# Konfigurasi Supabase
+SUPABASE_URL=https://your-project-id.supabase.co
+SUPABASE_SERVICE_KEY=your-supabase-service-key
+PASSWORD_RESET_REDIRECT_URL=http://yourdomain.com/reset-password
+```
 
 ## Tech Stack
 
